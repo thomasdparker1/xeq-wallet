@@ -144,7 +144,7 @@ class RestoreDesktopContainer extends Component<RestoreProps, RestoreState> {
                 onChange={this.onChangeHandler}
               />
               <Information>
-                Restore your vault by entering your 25 word seed phrase. This
+                Restore your wallet by entering your 25 word seed phrase. This
                 process will generate an encrypted vault file that enables you
                 to store, send and convert assets in complete privacy.
               </Information>
@@ -165,8 +165,8 @@ class RestoreDesktopContainer extends Component<RestoreProps, RestoreState> {
             <Body>
               <Form>
                 <Input
-                  label="Vault Name"
-                  placeholder="Create a vault name"
+                  label="Wallet Name"
+                  placeholder="Create a wallet name"
                   name="name"
                   type={"text"}
                   value={name}
@@ -184,7 +184,7 @@ class RestoreDesktopContainer extends Component<RestoreProps, RestoreState> {
               </Form>
               <InputButton
                 // @ts-ignore
-                label="Vault Password"
+                label="Wallet Password"
                 placeholder="Enter vault password"
                 name="pw"
                 type={this.state.showPassword === true ? "text" : "password"}

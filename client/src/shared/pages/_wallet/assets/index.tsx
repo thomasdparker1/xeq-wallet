@@ -22,6 +22,7 @@ import {
   BlockHeaderRate,
   selectXRate,
 } from "shared/reducers/blockHeaderExchangeRates";
+import DarkHeader from "../../../components/_layout/darkHeader";
 
 interface AssetsProps {
   balances: XBalances;
@@ -31,14 +32,24 @@ interface AssetsProps {
 
 interface AssetsState {}
 
-const Enabled_TICKER = [Ticker.xUSD, Ticker.XHV];
+const Enabled_TICKER = [Ticker.xUSD, Ticker.XEQ];
 
 class AssetsPage extends Component<AssetsProps, any> {
   state = {
     forexPriceFetched: false,
+    price: 1
   };
 
   componentDidMount() {
+    fetch('https://api.coingecko.com/api/v3/simple/price?ids=triton&vs_currencies=usd')
+        .then(function(response) {
+          if (response.status >= 400) {
+          }
+          return response.json();
+        })
+        .then((price) => {
+          this.state.price = price.triton.usd
+        });
     window.scrollTo(0, 0);
   }
 
@@ -61,6 +72,8 @@ class AssetsPage extends Component<AssetsProps, any> {
         this.props.balances[xTicker].lockedBalance
       );
 
+      console.log("TEST", this.state.price)
+
       const value = this.props.assetsInUSD[xTicker]!.unlockedBalance;
       const xRate = 1;
 
@@ -70,7 +83,7 @@ class AssetsPage extends Component<AssetsProps, any> {
           key={token}
           tokenName={token}
           ticker={xTicker}
-          price={xRate}
+          price={1}
           value={value}
           totalBalance={totalBalance}
           lockedBalance={lockedBalance}
@@ -88,7 +101,7 @@ class AssetsPage extends Component<AssetsProps, any> {
     return disabledTokens.map((data) => {
       const { token, ticker, symbol } = data;
 
-      const xTicker = ("x" + ticker) as Ticker;
+      const xTicker = (ticker) as Ticker;
       const rates = this.props.rates;
       const xRate = selectXRate(rates, xTicker, Ticker.xUSD);
       const xRateString = symbol + xRate.toFixed(2);
@@ -98,7 +111,7 @@ class AssetsPage extends Component<AssetsProps, any> {
           fullwidth="fullwidth"
           key={token}
           tokenName={token}
-          ticker={"x" + ticker}
+          ticker={ticker}
           price={xRateString}
           balance={"0.00"}
         />
@@ -116,21 +129,21 @@ class AssetsPage extends Component<AssetsProps, any> {
     const lockedBalance = convertBalanceToMoney(this.props.balances.XHV.lockedBalance);
 
     const xhvInUSD = this.props.assetsInUSD.XHV!.unlockedBalance;
-    const xRate = selectXRate(this.props.rates, Ticker.XHV, Ticker.xUSD);
+    const xRate = selectXRate(this.props.rates, Ticker.XEQ, Ticker.xUSD);
 
     return (
       <Body>
         <Overview />
-        <Header
-          title="Available Assets"
-          description="Overview of all available Haven assets"
+        <DarkHeader
+          title="Available Tokens"
+          description="Overview of all Equilibria tokens."
         />
         <Cell
           //@ts-ignore
           key={1}
-          tokenName={"Haven"}
-          ticker={"XHV"}
-          price={xRate}
+          tokenName={"Native Equilibria"}
+          ticker={"XEQ"}
+          price={this.state.price}
           value={xhvInUSD}
           fullwidth="fullwidth"
           totalBalance={totalBalance.toFixed(2)}
@@ -138,11 +151,15 @@ class AssetsPage extends Component<AssetsProps, any> {
           unlockedBalance={unlockedBalance}
         />
         {this.renderEnabledTokens()}
-        <Header
-          title="Coming Soon"
-          description="Upcoming Haven asset integrations"
+        <DarkHeader
+          title="Disabled Equilibria Tokens"
+          description="These are tokens that have not been added to the web app or have not been deployed."
         />
         {this.renderDisabledTokens()}
+        {/*<Header*/}
+        {/*    title="Pythia Contracts (Testnet)"*/}
+        {/*    description="Data feeds managed by Equilibria's oracle network. (testnet)"*/}
+        {/*/>*/}
       </Body>
     );
   }

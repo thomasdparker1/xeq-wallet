@@ -28,4 +28,5 @@ const INITIAL_STATE: XPriceRangeHistory = {
   xUSD: emptyPriceHistory,
   XHV: emptyPriceHistory,
   xBTC: emptyPriceHistory,
+  XEQ: emptyPriceHistory,
 };

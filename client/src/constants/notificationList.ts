@@ -105,7 +105,7 @@ export const notificationList = [
   {
     key: "",
     code: -13,
-    message: "This Vault is not open. Please wait and try again.",
+    message: "This Wallet is not open. Please wait and try again.",
     type: NotificationType.ERROR,
     description: "WALLET_RPC_ERROR_CODE_NOT_OPEN",
   },
@@ -162,7 +162,7 @@ export const notificationList = [
   {
     key: "",
     code: -21,
-    message: "Oops, this Vault already exists. Please try again.",
+    message: "Oops, this Wallet already exists. Please try again.",
     type: NotificationType.ERROR,
     description: "WALLET_RPC_ERROR_CODE_WALLET_ALREADY_EXISTS",
   },
@@ -176,7 +176,7 @@ export const notificationList = [
   {
     key: "",
     code: -23,
-    message: "Sorry, your Vault directory can't be found.",
+    message: "Sorry, your Wallet directory can't be found.",
     type: NotificationType.ERROR,
     description: "WALLET_RPC_ERROR_CODE_NO_WALLET_DIR",
   },
@@ -197,7 +197,7 @@ export const notificationList = [
   {
     key: "",
     code: -26,
-    message: "Your Vault HEX is bad. Please try again.",
+    message: "Your Wallet HEX is bad. Please try again.",
     type: NotificationType.ERROR,
     description: "WALLET_RPC_ERROR_CODE_BAD_HEX",
   },

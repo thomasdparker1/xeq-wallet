@@ -9,7 +9,7 @@ class LoginOnboarding extends React.Component<any, any> {
     return (
       <Modal
         title="Welcome to Haven"
-        description="Take a few moments to learn about your vault"
+        description="Take a few moments to learn about your Wallet"
         leftButton="Learn More"
         rightButton="Ok, I got it"
         disabledRight={false}

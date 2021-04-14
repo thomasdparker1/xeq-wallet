@@ -59,7 +59,7 @@ class Chart extends Component {
     this.setState((prev) => ({
       ...prev,
       hoveredLabel: label,
-      hoveredValue: "$" + value.toFixed(2),
+      hoveredValue: "$" + value.toFixed(3),
       currentlyHovering: true,
     }));
   }
@@ -191,7 +191,7 @@ class Chart extends Component {
                 {
                   backgroundColor: `${this.props.theme.body.foreground}`,
                   borderColor: `${this.props.theme.charts.border}`,
-                  pointBackgroundColor: `${this.props.theme.charts.border}`,
+                  pointBackgroundColor: `${"#FFF"}`,
                   data: this.props.prices,
                 },
               ],

@@ -21,7 +21,7 @@ export const Field = styled.input`
   padding: 16px;
   font-family: Inter-Regular;
   font-size: 16px;
-  color: ${(props) => props.theme.input.input_value};
+  color: ${(props) => props.theme.input.optionalSecondary};
   line-height: 26px;
   outline: none;
   width: auto;

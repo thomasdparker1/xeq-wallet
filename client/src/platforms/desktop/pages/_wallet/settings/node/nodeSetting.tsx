@@ -62,7 +62,7 @@ class NodeSettingComponent extends React.Component<
     isConnecting: this.props.node.isConnecting,
     locked: this.props.isConnected,
     selectedNodeOption: this.props.node.location === NodeLocation.None ? this.props.defaultNode
-    :  
+    :
     this.props.nodeOptions.find(
       (nodeOption) => nodeOption.address === this.props.node.address
     )!,
@@ -123,7 +123,7 @@ class NodeSettingComponent extends React.Component<
     nextProps: Readonly<NodeSettingProps>,
     prevState: Readonly<NodeSettingState>
   ) {
-    
+
     let newState:Partial<NodeSettingState> = {};
 
     //track previous isConnecting state
@@ -204,10 +204,10 @@ class NodeSettingComponent extends React.Component<
             <Intstructions>
               <Information>
                 {this.props.isConnected
-                  ? "Vault is connected to "
+                  ? "Wallet is connected to "
                   : this.props.node.location !== NodeLocation.None && this.props.node.isConnecting
-                  ? "Vault is trying to connect to "
-                  : "Vault is not connected to "}
+                  ? "Wallet is trying to connect to "
+                  : "Wallet is not connected to "}
                 <strong>{this.state.selectedNodeOption.name}</strong>. Change
                 nodes by clicking <strong>Disconnect</strong>, then select a new
                 node from the dropdown, then click <strong>Connect</strong>.

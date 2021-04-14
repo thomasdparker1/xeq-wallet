@@ -18,6 +18,7 @@ import { isDesktop, isWeb } from "constants/env";
 import { SettingsWeb } from "platforms/web/pages/_wallet/settings";
 import { refresh } from "shared/actions/refresh";
 import { isWalletSynced } from "shared/reducers/chain";
+import {Staking} from "../../pages/_wallet/staking";
 
 /**
  *root component for private wallet
@@ -66,6 +67,11 @@ class PrivateRoutesContainer extends Component {
             path={`${match.url}/transfer`}
             exact
             component={HavenTransfer}
+          />
+          <Route
+              path={`${match.url}/staking`}
+              exact
+              component={Staking}
           />
           <Route
             path={`${match.url}/settings`}

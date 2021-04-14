@@ -25,7 +25,7 @@ export const Field = styled.select`
   &::placeholder {
     font-family: Inter-Regular;
     font-size: 16px;
-    color: #8a8d90;
+    color: #172b4d;
     line-height: 26px;
   }
 `;

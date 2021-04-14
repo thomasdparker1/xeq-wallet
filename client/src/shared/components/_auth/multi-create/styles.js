@@ -12,7 +12,7 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.div`
-  background: #36393f;
+  background: #84b2e6;
   border-radius: 2px 2px 0px 0px;
   height: auto;
   padding: 10px;
@@ -31,7 +31,7 @@ export const Step = styled.div`
     (props.width === 1 ? "10%" : null) ||
     (props.width === 2 ? "50%" : null) ||
     (props.width === 3 ? "100%" : null)}
-  background: #7289DA;
+  background: #005BC6;
   height: auto;
   border-radius: 4px;
 `;
@@ -52,7 +52,7 @@ export const Buttons = styled.div`
 `;
 
 export const Submit = styled.button`
-  background: #7289da;
+  background: #005BC6;
   border-radius: 4px;
   font-family: Inter-Regular;
   font-size: 14px;
@@ -72,7 +72,7 @@ export const Submit = styled.button`
   &:hover {
     cursor: pointer;
     transition: 500ms;
-    background: #5b6eae;
+    background: #2363ad;
   }
 
   &:disabled {
@@ -106,7 +106,7 @@ export const Back = styled.div`
 `;
 
 export const Cancel = styled(Link)`
-  background: #36393f;
+  background: #172b4d;
   border-radius: 4px;
   font-family: Inter-Regular;
   font-size: 14px;
@@ -124,7 +124,7 @@ export const Cancel = styled(Link)`
 
   &:hover {
     cursor: pointer;
-    background: #27292;
+    background: #152441;
     transition: 500ms;
   }
 `;
@@ -137,7 +137,7 @@ export const Footer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  background: #36393f;
+  background: #84b2e6;
   border-radius: 0px 0px 4px 4px;
 `;
 
@@ -152,6 +152,6 @@ export const Route = styled(Link)`
 export const Label = styled.div`
   font-family: Inter-Regular;
   font-size: 14px;
-  color: #8a8d90;
+  color: #172b4d;
   text-decoration: none;
 `;

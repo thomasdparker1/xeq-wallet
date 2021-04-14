@@ -27,7 +27,7 @@ class RescanBCM extends React.Component<any, any> {
     const { isLoading } = this.state;
     return (
       <Modal
-        title="Refresh Vault"
+        title="Refresh Wallet"
         description="Detect and clear stuck transactions"
         leftButton={"Cancel"}
         rightButton="Refresh"

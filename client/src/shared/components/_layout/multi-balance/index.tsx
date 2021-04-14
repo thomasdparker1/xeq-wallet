@@ -78,7 +78,7 @@ class Balances extends Component<BalanceProps, BalanceState> {
         </Amount>
         <Value>
           {isSyncing
-            ? `Syncing Vault... ${percentage}%`
+            ? `Syncing Wallet... ${percentage}%`
             : `Portfolio Value (${
                 ticker === "XHV" ? ticker : ticker.substring(1)
               }) `}

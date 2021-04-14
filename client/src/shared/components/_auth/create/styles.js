@@ -6,13 +6,13 @@ export const Container = styled.div`
   width: 624px;
   flex-direction: column;
   margin: 20px;
-  border: 1px solid #3a4048;
+  border: 1px solid #334667;
   border-radius: 4px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
 `;
 
 export const Main = styled.div`
-  background: #36393f;
+  background: #84b2e6;
   border-radius: 2px 2px 0px 0px;
   height: auto;
   padding: 10px;
@@ -39,8 +39,8 @@ export const Tab = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  background: ${(props) => (props.active ? "#36393F" : "#2B2E32")};
-  color: ${(props) => (props.active ? "#ffffff" : "#8a8d90")};
+  background: ${(props) => (props.active ? "#2363ad" : "#2B2E32")};
+  color: ${(props) => (props.active ? "#ffffff" : "#172b4d")};
 
   &:hover {
     cursor: pointer;
@@ -58,7 +58,7 @@ export const Title = styled.div`
 export const Description = styled.div`
   font-family: Inter-Regular;
   font-size: 14px;
-  color: #8a8d90;
+  color: #172b4d;
   line-height: 24px;
 `;
 
@@ -96,7 +96,7 @@ export const Buttons = styled.div`
 `;
 
 export const Submit = styled.button`
-  background: #7289da;
+  background: #005BC6;
   border-radius: 4px;
   font-family: Inter-Regular;
   font-size: 14px;
@@ -116,7 +116,7 @@ export const Submit = styled.button`
   &:hover {
     cursor: pointer;
     transition: 500ms;
-    background: #5b6eae;
+    background: #2363ad;
   }
 
   &:disabled {
@@ -126,7 +126,7 @@ export const Submit = styled.button`
 `;
 
 export const Back = styled.div`
-  background: #36393f;
+  background: #172b4D;
   border-radius: 4px;
   font-family: Inter-Regular;
   font-size: 14px;
@@ -138,7 +138,7 @@ export const Back = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #3a4048;
+  border: 1px solid #334667;
   text-decoration: none;
   transition: 500ms;
 
@@ -181,7 +181,7 @@ export const Footer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  background: #36393f;
+  background: #84b2e6;
   border-radius: 0px 0px 4px 4px;
 `;
 
@@ -196,6 +196,6 @@ export const Route = styled(Link)`
 export const Label = styled.div`
   font-family: Inter-Regular;
   font-size: 14px;
-  color: #8a8d90;
+  color: #172b4d;
   text-decoration: none;
 `;

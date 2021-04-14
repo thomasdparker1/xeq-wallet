@@ -94,7 +94,7 @@ export const Ticker = styled.div`
 `;
 
 export const Name = styled.div`
-  color: ${(props) => props.theme.input.input_value};
+  color: ${(props) => props.theme.input.optionalSecondary};
 `;
 
 export const Button = styled.button`

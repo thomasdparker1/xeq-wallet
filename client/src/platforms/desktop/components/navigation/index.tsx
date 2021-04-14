@@ -231,7 +231,7 @@ class Navigation extends Component<NavigationProps, any> {
                       />
                       {!syncStarted ? (
                         <>
-                          <Cell body="Vault Status" label="Synced" />
+                          <Cell body="Wallet Status" label="Synced" />
                         </>
                       ) : (
                         <Cell
@@ -257,7 +257,7 @@ class Navigation extends Component<NavigationProps, any> {
                   ) : (
                     <>
                       <Cell
-                        body="Vault Connected"
+                        body="Wallet Connected"
                         label={connected ? "Yes" : "No"}
                       />
                       <Cell body="Block Height" label={chainHeight} />
@@ -265,7 +265,7 @@ class Navigation extends Component<NavigationProps, any> {
                         body="Refresh Height"
                         label={this.props.restoreHeight}
                       />
-                      <Scan onClick={this.refreshVault}>Refresh Vault</Scan>
+                      <Scan onClick={this.refreshVault}>Refresh Wallet</Scan>
                     </>
                   )}
                 </>

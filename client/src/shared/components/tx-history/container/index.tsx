@@ -24,6 +24,7 @@ import {
   selectXRate,
 } from "shared/reducers/blockHeaderExchangeRates";
 import { getAllTransfers } from "shared/actions/transferHistory";
+import DarkHeader from "../../_layout/darkHeader";
 
 
 export interface TxEntry {
@@ -74,7 +75,7 @@ class TxHistoryContainer extends Component<TxHistoryProps, any> {
 
     return (
       <>
-        <Header
+        <DarkHeader
           title="History"
           description={`Review your ${this.props.assetId} transaction history`}
         />
@@ -98,7 +99,7 @@ class TxHistoryContainer extends Component<TxHistoryProps, any> {
             ) : (
               <EmptyState>
                 <NoTransactions>
-                  <Illustration />
+                  {/*<Illustration />*/}
                 </NoTransactions>
                 <Message>
                   No transactions found. Once you send, receive or exchange

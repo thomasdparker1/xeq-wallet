@@ -74,7 +74,7 @@ const openWallet = (walletData: IOpenWallet, path: string) => {
       dispatch(
         addNotificationByMessage(
           NotificationType.SUCCESS,
-          "Vault was successfully unlocked"
+          "Wallet was successfully unlocked"
         )
       );
       dispatch(startWalletSession(path));
@@ -84,7 +84,7 @@ const openWallet = (walletData: IOpenWallet, path: string) => {
 
       addNotificationByMessage(
         NotificationType.ERROR,
-        "Open vault is not working, please try again soon..."
+        "Open Wallet is not working, please try again soon..."
       );
       dispatch(openWalletFailed(e));
 
@@ -122,13 +122,13 @@ export const createNewWallet = (
       const mnemomic = await walletProxy.getMnemonic();
       dispatch(queryMnemonicForWalletGenerationSucceed(mnemomic));
       dispatch(createWalletSucceed());
-      addNotificationByMessage(NotificationType.SUCCESS, "Vault is open");
+      addNotificationByMessage(NotificationType.SUCCESS, "Wallet is open");
 
     }catch (e) {
 
       addNotificationByMessage(
         NotificationType.ERROR,
-        "Open vault is not working, please try again soon..."
+        "Open wallet is not working, please try again soon..."
       );
       dispatch(createWalletFailed(e));
     }
@@ -176,13 +176,13 @@ export const restoreWalletByMnemomic = (
       dispatch(restoreWalletSucceed(walletName));
       addNotificationByMessage(
         NotificationType.SUCCESS,
-        "Restored vault with Mnemomic"
+        "Restored wallet with Mnemomic"
       );
     } catch(e) {
 
       addNotificationByMessage(
         NotificationType.ERROR,
-        "Restore vault is not working, please try again soon..."
+        "Restore wallet is not working, please try again soon..."
       );
       dispatch(restoreWalletFailed(e));
     }
@@ -220,14 +220,14 @@ export const restoreWalletByKeys = (
       dispatch(restoreWalletSucceed(path));
       addNotificationByMessage(
         NotificationType.SUCCESS,
-        "Restored vault with Keystore"
+        "Restored wallet with Keystore"
       );
 
     } catch(e) {
 
       addNotificationByMessage(
         NotificationType.ERROR,
-        "Open vault is not working, please try again soon..."
+        "Open wallet is not working, please try again soon..."
       );
       dispatch(restoreWalletFailed(e));
 
@@ -319,7 +319,7 @@ export const getNodeForWallet = (getState: () => HavenAppState): IMonerRPCConnec
   if (selectedNode.location === NodeLocation.None)
   {
     return undefined;
-  } 
+  }
 
   return { uri: selectedNode.address! + ":" + selectedNode.port!, username: "super", password: "super" };
 

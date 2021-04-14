@@ -91,7 +91,7 @@ class OpenWalletDesktopContainer extends Component<
 
     const noWallets = [
       {
-        name: "No vaults found",
+        name: "No wallet found",
       },
     ];
 
@@ -100,8 +100,8 @@ class OpenWalletDesktopContainer extends Component<
         <Dropdown
           onClick={this.handleNoWallet}
           options={noWallets}
-          placeholder="Select a vault"
-          label={"Select Vault"}
+          placeholder="Select a wallet"
+          label={"Select wallet"}
           error={""}
           value={"Select a vault"}
         >
@@ -109,8 +109,8 @@ class OpenWalletDesktopContainer extends Component<
         </Dropdown>
         {/* @ts-ignore */}
         <InputButton
-          label="Vault Password"
-          placeholder="Enter vault password"
+          label="Wallet Password"
+          placeholder="Enter Wallet password"
           name="password"
           value={password}
           onChange={this.onChangeHandler}
@@ -121,7 +121,7 @@ class OpenWalletDesktopContainer extends Component<
           width={false}
         />
         <Information>
-          Select your vault file and enter your password. If you are new to
+          Select your wallet file and enter your password. If you are new to
           Haven and want to start storing, sending and converting assets in
           complete privacy, then click the "Create" button to get started.
         </Information>
@@ -143,13 +143,13 @@ class OpenWalletDesktopContainer extends Component<
           onClick={(wallet) => this.onSelectWallet(wallet)}
           options={this.props.wallets}
           placeholder={"Select vault"}
-          label={"Select Vault"}
+          label={"Select Wallet"}
           error={error}
           value={selectedWallet}
         />
         <InputButton
-          label="Vault Password"
-          placeholder="Enter vault password"
+          label="Wallet Password"
+          placeholder="Enter Wallet password"
           name="password"
           value={password}
           onChange={this.onChangeHandler}
@@ -159,7 +159,7 @@ class OpenWalletDesktopContainer extends Component<
           button={this.state.showPassword === true ? "hide" : "show"}
         />
         <Information>
-          Select your vault file and enter your password. If you are new to
+          Select your wallet file and enter your password. If you are new to
           Haven and want to start storing, sending and converting assets in
           complete privacy, then click the "Create" button to get started.
         </Information>

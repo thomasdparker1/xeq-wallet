@@ -194,8 +194,8 @@ class CreateDesktopContainer extends Component<
           <>
             <Input
               error={this.state.error}
-              label="Vault Name"
-              placeholder="Create a Vault name"
+              label="Wallet Name"
+              placeholder="Create a wallet name"
               name="fileName"
               type={"text"}
               value={fileName}
@@ -204,8 +204,8 @@ class CreateDesktopContainer extends Component<
 
             <InputButton
               // @ts-ignore
-              label="Vault Password"
-              placeholder="Enter your Vault password"
+              label="Wallet Password"
+              placeholder="Enter your Wallet password"
               name="pw"
               type={this.state.showPassword === true ? "text" : "password"}
               button={this.state.showPassword === true ? "hide" : "show"}
@@ -215,9 +215,9 @@ class CreateDesktopContainer extends Component<
             />
 
             <Information>
-              Enter a unique name and strong password to create a vault. You
+              Enter a unique name and strong password to create a wallet. You
               will be asked to confirm this password on the final step. This
-              process will generate an encrypted vault file that enables you to
+              process will generate an encrypted wallet file that enables you to
               store, send and convert assets in complete privacy.
             </Information>
           </>
@@ -233,7 +233,7 @@ class CreateDesktopContainer extends Component<
             />
             <Information>
               A seed phrase provides full access to your account. It can be used
-              to generate new vault files or login directly. If you lose this
+              to generate new wallet files or login directly. If you lose this
               seed phrase then it’s impossible to recover your funds. Store it
               in a reputable password manager or on a piece of paper. Do not
               share it with anyone.
@@ -267,7 +267,7 @@ class CreateDesktopContainer extends Component<
 
             <Information>
               Re-enter the required words from the seed phrase that was provided
-              on the previous step. As a reminder, if you lose both your vault
+              on the previous step. As a reminder, if you lose both your wallet
               file and password or seed phrase then your funds are lost forever
               with no possibility of being recovered. Store them in a safe and
               secure location.

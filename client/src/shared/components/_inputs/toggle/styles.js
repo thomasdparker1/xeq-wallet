@@ -53,7 +53,7 @@ export const Field = styled.input`
   width: 100%;
   height: auto;
   font-size: 16px;
-  color: ${(props) => props.theme.input.input_value};
+  color: ${(props) => props.theme.input.optionalSecondary};
   line-height: 26px;
   outline: none;
   transition: 500ms;

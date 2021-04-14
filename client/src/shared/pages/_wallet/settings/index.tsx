@@ -17,6 +17,7 @@ import { IKeys } from "typings";
 import { isTemporaryWallet as selectIsTemporaryWallet } from "shared/reducers/walletSession";
 import { selectSyncState } from "shared/reducers/chain";
 import { SyncState } from "shared/types/types";
+import DarkHeader from "../../../components/_layout/darkHeader";
 
 const options = [
   { theme: "dark", value: "Dark Theme" },
@@ -91,7 +92,7 @@ class SettingsPage extends Component<SettingsProps, SettingsState> {
 
     return (
       <Body>
-        <Header
+        <DarkHeader
           title="Theme "
           description="Choose between light and dark themes"
         />
@@ -106,7 +107,7 @@ class SettingsPage extends Component<SettingsProps, SettingsState> {
           />
         </Form>
 
-        <Header
+        <DarkHeader
           title="Private Keys"
           description="Manage your vault's private keys"
         />

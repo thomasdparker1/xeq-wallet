@@ -73,20 +73,20 @@ export class MultiLogin extends Component {
     return (
       <Container>
         <Header>
-          <Title>Vault Login</Title>
+          <Title>Wallet Login</Title>
           <Subtitle>
-            To access your Vault please enter your preferred login option
+            To access your wallet please enter your preferred login option
           </Subtitle>
         </Header>
         <Tabs>
           <Tab active={keystore} onClick={this.selectKeystore}>
-            Open Vault
+            Open Wallet
           </Tab>
           <Tab active={seed} onClick={this.selectSeed}>
-            Create Vault
+            Create Wallet
           </Tab>
           <Tab active={ledger} onClick={this.selectLedger}>
-            Restore Vault
+            Restore Wallet
           </Tab>
         </Tabs>
         <Main>
@@ -156,8 +156,8 @@ export class MultiLogin extends Component {
           </Buttons>
         </Main>
         <Footer>
-          <Label>Need a Vault?</Label>
-          <Route to={"/create"}>Create or Restore a Vault</Route>
+          <Label>Need a Wallet?</Label>
+          <Route to={"/create"}>Create or Restore a Wallet</Route>
         </Footer>
       </Container>
     );

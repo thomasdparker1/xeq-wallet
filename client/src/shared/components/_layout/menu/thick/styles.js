@@ -139,3 +139,67 @@ export const Item = styled(NavLink).attrs({
 
   `}
 `;
+
+export const ItemDisabled = styled.div`
+  height: auto;
+  color: ${(props) => props.theme.type.secondary};
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 12px;
+  padding: 20px;
+  border-radius: 8px;
+  transition: 250ms;
+
+  &:hover {
+    cursor: not-allowed;
+  }
+
+  &.${activeClassName} {
+    margin: 4px 12px;
+    padding: 20px;
+    color: ${(props) => props.theme.button.primary_label};
+    background: ${(props) => props.theme.button.primary};
+    transition: 250ms;
+    border-radius: 8px;
+
+    &:hover {
+      background: ${(props) => props.theme.button.primary_hover};
+      transition: 250ms;
+    }
+  }
+
+  ${media.laptop`
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    z-index: 5000;
+    margin: 0px
+    border-radius: 0px;
+    border-top: 1px solid ${(props) => props.theme.body.border};
+    border-right: 1px solid ${(props) => props.theme.body.border};
+
+
+    &.${activeClassName} {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 58px;
+      margin: 0px;
+      padding: 0px;
+      border-radius: 0px;
+      color: ${(props) => props.theme.type.primary};
+      background: none;
+      border-top: 3px solid ${(props) => props.theme.button.primary};
+      text-align: center;
+
+      &:hover {
+        background: none;
+      }
+    }
+
+  `}
+`;

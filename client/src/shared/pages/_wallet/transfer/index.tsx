@@ -8,6 +8,7 @@ import Body from "../../../components/_layout/body";
 import Header from "../../../components/_layout/header";
 import { SendFunds } from "./send";
 import { AddressEntry } from "shared/reducers/address";
+import DarkHeader from "../../../components/_layout/darkHeader";
 
 // Relative Imports
 
@@ -66,7 +67,7 @@ export class Transfer extends Component<TransferProps, TransferState> {
     return (
       <Fragment>
         <Body>
-          <Header
+          <DarkHeader
             title="Transfer"
             description="Send or receive assets to and from your Haven Vault"
           />

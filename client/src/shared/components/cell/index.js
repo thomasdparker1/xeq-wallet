@@ -62,10 +62,12 @@ const Cell = ({
                 <Subtitle>
                   {price === 0 ? (
                     <Row>
-                      $ <Dots />
+                      ${price.toFixed(3)}
                     </Row>
                   ) : (
-                    `${"$" + price.toFixed(2)}`
+                      <Row>
+                        ${price.toFixed(3)}
+                      </Row>
                   )}
                 </Subtitle>
               </Row>

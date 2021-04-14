@@ -49,6 +49,7 @@ const INITIAL_STATE: XBalances = {
   xUSD: { ...INITIAL_BALANCE },
   XHV: { ...INITIAL_BALANCE },
   xBTC: { ...INITIAL_BALANCE },
+  XEQ: { ...INITIAL_BALANCE },
 };
 
 export function fetching(
@@ -100,6 +101,7 @@ export const selectTotalBalances = (
   const defaultBalance = {
     [Ticker.XHV]: { ...INITIAL_VIEW_BALANCE },
     [Ticker.xUSD]: { ...INITIAL_VIEW_BALANCE },
+    [Ticker.XEQ]: { ...INITIAL_VIEW_BALANCE },
     xBTC: { ...INITIAL_VIEW_BALANCE },
   };
 
@@ -169,7 +171,7 @@ export const selectValueOfAssetsInUSD = (
 ): XViewBalance => {
   const xhvToUSDRate: number = selectXRate(
     state.blockHeaderExchangeRate,
-    Ticker.XHV,
+    Ticker.XEQ,
     Ticker.xUSD
   );
 
@@ -180,7 +182,7 @@ export const selectValueOfAssetsInUSD = (
   );
 
   let xhvBalanceInUSD: ViewBalance = { ...INITIAL_VIEW_BALANCE };
-  Object.entries(state.xBalance.XHV).forEach(
+  Object.entries(state.xBalance.XEQ).forEach(
     ([balanceType, balance]) =>
       (xhvBalanceInUSD[balanceType] = convertBalanceToMoney(
         balance.toJSNumber() * xhvToUSDRate

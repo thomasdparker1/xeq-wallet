@@ -20,6 +20,7 @@ export const Main = styled.div`
   background: ${(props) => props.theme.body.background};
   min-height: 350px;
   padding: 10px;
+  border-top: 1px solid ${(props) => props.theme.body.border};
 `;
 
 export const Body = styled.div`

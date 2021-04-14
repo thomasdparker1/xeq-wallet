@@ -119,12 +119,12 @@ const English = () => {
             and Linux as well as Android and Apple mobile devices. There are
             different options according to your needs:
           </Description>
-          <Title>Web Vault</Title>
+          <Title>Web Wallet</Title>
           <Description>
             This is the simplest method for those using computers who do not
             wish to run their own node.
           </Description>
-          <Title>Haven Desktop Vault (GUI)</Title>
+          <Title>Haven Desktop Wallet (GUI)</Title>
           <Description>
             This is downloaded as an app on your computer and provides a simple
             to use vault for storing XHV and all Haven xAssets.

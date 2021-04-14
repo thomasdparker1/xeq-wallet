@@ -62,7 +62,7 @@ class MultiLoginPage extends Component<MultiLoginProps, MultiloginState> {
     return (
       <Container>
         <Header>
-          <Title>{loginType === 2 ? "Restore Vault" : "Create a Vault"}</Title>
+          <Title>{loginType === 2 ? "Restore Wallet" : "Create a Wallet"}</Title>
           <Description>
             Privately store, exchange and transfer assets.
           </Description>
@@ -86,7 +86,7 @@ class MultiLoginPage extends Component<MultiLoginProps, MultiloginState> {
           {loginType === LOGIN_TYPE.Create && <CreateDesktop />}
         </Main>
         <Footer>
-          <Label>Have a Vault?</Label>
+          <Label>Have a Wallet?</Label>
           <Route to={"/"}>Login</Route>
         </Footer>
       </Container>

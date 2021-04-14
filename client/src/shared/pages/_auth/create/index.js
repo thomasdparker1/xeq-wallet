@@ -154,7 +154,7 @@ export class CreateWebComponent extends Component {
     return (
       <Container>
         <Auth
-          title="Create a Vault"
+          title="Create a Wallet"
           link="/"
           route="Login"
           label="Have a Vault?"

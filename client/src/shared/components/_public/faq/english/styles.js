@@ -54,7 +54,7 @@ export const Title = styled.h3`
 
 export const Description = styled.p`
   font-size: 16px;
-  color: #8a8d90;
+  color: #172b4d;
   letter-spacing: 0;
   line-height: 26px;
   text-align: left;

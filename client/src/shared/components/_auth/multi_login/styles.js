@@ -63,7 +63,7 @@ export const Title = styled.div`
 export const Description = styled.div`
   font-family: Inter-Regular;
   font-size: 14px;
-  color: #8a8d90;
+  color: #172b4d;
   line-height: 24px;
 `;
 
@@ -80,7 +80,7 @@ export const Step = styled.div`
     (props.width === 1 ? "10%" : null) ||
     (props.width === 2 ? "50%" : null) ||
     (props.width === 3 ? "100%" : null)}
-  background: #7289DA;
+  background: #005BC6;
   height: auto;
   border-radius: 4px;
 `;
@@ -100,7 +100,7 @@ export const Buttons = styled.div`
 `;
 
 export const Submit = styled.button`
-  background: #7289da;
+  background: #005BC6;
   border-radius: 4px;
   font-family: Inter-Regular;
   font-size: 14px;
@@ -119,7 +119,7 @@ export const Submit = styled.button`
   &:hover {
     cursor: pointer;
     transition: 500ms;
-    background: #5b6eae;
+    background: #2363ad;
   }
 
   &:disabled {
@@ -129,7 +129,7 @@ export const Submit = styled.button`
 `;
 
 export const Back = styled.div`
-  background: #36393f;
+  background: #172b4d;
   border-radius: 4px;
   font-family: Inter-Regular;
   font-size: 14px;
@@ -147,13 +147,13 @@ export const Back = styled.div`
 
   &:hover {
     cursor: pointer;
-    background: #313339;
+    background: #152441;
     transition: 500ms;
   }
 `;
 
 export const Cancel = styled(Link)`
-  background: #36393f;
+  background: #172b4d;
   border-radius: 4px;
   font-family: Inter-Regular;
   font-size: 14px;
@@ -171,7 +171,7 @@ export const Cancel = styled(Link)`
 
   &:hover {
     cursor: pointer;
-    background: #313339;
+    background: #152441;
     transition: 500ms;
   }
 `;
@@ -199,6 +199,6 @@ export const Route = styled(Link)`
 export const Label = styled.div`
   font-family: Inter-Regular;
   font-size: 14px;
-  color: #8a8d90;
+  color: #172b4d;
   text-decoration: none;
 `;

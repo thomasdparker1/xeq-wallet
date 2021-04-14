@@ -20,7 +20,7 @@ export const getPriceHistory = (rangeInDays) => {
 
     dispatch(getPriceDataFetching());
     fetch(
-      `https://api.coingecko.com/api/v3/coins/haven/market_chart?vs_currency=usd&days=${rangeInDays}`
+      `https://api.coingecko.com/api/v3/coins/triton/market_chart?vs_currency=usd&days=${rangeInDays}`
     )
       .then((response) => response.json())
       .then(decreasePricePoints)

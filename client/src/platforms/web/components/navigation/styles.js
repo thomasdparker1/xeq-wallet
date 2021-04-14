@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import { ReactComponent as ArrowUp } from "../../../../assets/icons/arrow-up.svg";
-import { ReactComponent as HavenIcon } from "../../../../assets/icons/haven.svg";
+import { ReactComponent as HavenIcon } from "../../../../assets/icons/xeq_logo.svg";
 import { ReactComponent as OptionIcon } from "../../../../assets/icons/options.svg";
 
 const appear = keyframes`
@@ -47,8 +47,8 @@ export const Label = styled.div`
 `;
 
 export const Icon = styled(HavenIcon)`
-  height: 24px;
-  width: 24px;
+  height: 35px;
+  width: 35px;
 
   .color {
     fill: ${(props) => props.theme.type.primary};

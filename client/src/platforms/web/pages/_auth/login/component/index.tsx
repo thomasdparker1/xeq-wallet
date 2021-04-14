@@ -179,11 +179,11 @@ export default class Login extends Component<LoginProps, LoginState> {
     return (
       <Container>
         <Auth
-          title={this.state.selectKeystore ? "Vault Login" : "Seed Login"}
+          title={this.state.selectKeystore ? "Wallet Login" : "Seed Login"}
           description={"Privately store, exchange and transfer assets"}
           link="/"
           route="Create or Restore"
-          label="Need a Vault?"
+          label="Need a Wallet?"
           hideTabs={true} // hide the seed login
           disable={isLoginDisabled}
           onClick={() => this.handleLogin()}
@@ -225,10 +225,10 @@ export default class Login extends Component<LoginProps, LoginState> {
           ) : (
             <>
               <InputUpload
-                label="Vault File"
+                label="Wallet File"
                 value={
                   this.state.fileName === ""
-                    ? "Select vault file"
+                    ? "Select Wallet file"
                     : this.state.fileName
                 }
                 button="Select"
@@ -241,7 +241,7 @@ export default class Login extends Component<LoginProps, LoginState> {
               />
               {/* @ts-ignore */}
               <Toggle
-                label="Vault Password"
+                label="Wallet Password"
                 placeholder="Enter password"
                 name="password"
                 value={password}

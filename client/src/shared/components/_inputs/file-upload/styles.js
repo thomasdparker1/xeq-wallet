@@ -29,7 +29,7 @@ export const Button = styled.input`
 `;
 
 export const Label = styled.label`
-  color: #8a8d90;
+  color: #172b4d;
   display: inline-block;
   padding: 6px 12px;
   cursor: pointer;

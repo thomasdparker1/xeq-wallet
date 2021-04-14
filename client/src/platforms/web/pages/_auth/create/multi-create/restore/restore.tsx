@@ -203,9 +203,9 @@ class RestoreWeb extends Component<RestoreProps, RestoreState> {
           <>
             <Form>
               <Input
-                label="Vault Name"
+                label="Wallet Name"
                 type="text"
-                placeholder="Create a Vault name"
+                placeholder="Create a wallet name"
                 name="create_vault_name"
                 value={this.state.create_vault_name}
                 onChange={this.handleChange}
@@ -222,8 +222,8 @@ class RestoreWeb extends Component<RestoreProps, RestoreState> {
             </Form>
 
             <Toggle
-              label="Vault Password"
-              placeholder="Create a Vault password"
+              label="Wallet Password"
+              placeholder="Create a Wallet password"
               name="create_vault_password"
               type={this.state.reveal === true ? "text" : "password"}
               reveal={this.state.reveal}
@@ -304,7 +304,7 @@ class RestoreWeb extends Component<RestoreProps, RestoreState> {
     const { step } = this.state;
     return (
       <MultiRestore
-        title="Create a Vault"
+        title="Create a Wallet"
         link="/login"
         route="Login"
         label="Have a Vault?"

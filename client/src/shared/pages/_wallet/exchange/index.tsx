@@ -79,7 +79,7 @@ export interface ExchangePrioOption {
 
 const assetOptions: AssetOption[] = [
   { name: "Haven", ticker: Ticker.XHV },
-  { name: "United States Dollar", ticker: Ticker.xUSD },
+  // { name: "United States Dollar", ticker: Ticker.xUSD },
 ];
 
 const exchangePrioOptions: ExchangePrioOption[] = [

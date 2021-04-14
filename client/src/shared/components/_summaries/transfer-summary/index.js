@@ -18,12 +18,12 @@ const TransferSummary = ({
   return (
     <Container>
       <Row>
-        <Key>Transfer Asset</Key>
+        <Key>Transfer Amount</Key>
         <Value>
           {transferAmount === "--"
             ? "0"
             : transferAmount && !isNaN(transferAmount)
-            ? parseFloat(transferAmount).toFixed(2)
+            ? parseFloat(transferAmount).toLocaleString()
             : "0"}{" "}
           {transferAsset}
         </Value>

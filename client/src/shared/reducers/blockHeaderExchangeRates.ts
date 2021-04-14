@@ -81,9 +81,12 @@ export const selectXRate = (
     blockHeaderExchangeRate[blockHeaderExchangeRate.length - 1];
 
   if (from === Ticker.XHV && to !== Ticker.XHV) {
+    // @ts-ignore
     return latestBlockerHeader[to].toJSNumber() / Math.pow(10, 12);
   } else if (from !== Ticker.XHV && to === Ticker.XHV) {
+    // @ts-ignore
     if (!latestBlockerHeader[from].isZero()) {
+      // @ts-ignore
       return Math.pow(10, 12) / latestBlockerHeader[from].toJSNumber();
     }
   }

@@ -29,7 +29,7 @@ const Auth = ({ ...props }) => {
       {!props.hideTabs ? (
         <Tabs>
           <Tab active={!props.selectedSeed} onClick={props.selectKeystore}>
-            Vault File
+            Wallet File
           </Tab>
           <Tab active={props.selectedSeed} onClick={props.selectSeed}>
             Seed Phrase

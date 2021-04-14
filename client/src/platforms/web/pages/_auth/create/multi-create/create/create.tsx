@@ -159,8 +159,8 @@ class CreateWalletWeb extends Component<CreateProps, CreateState> {
         return (
           <>
             <Input
-              label="Vault Name"
-              placeholder="Create a vault name"
+              label="Wallet Name"
+              placeholder="Create a wallet name"
               name="create_vault_name"
               type="text"
               value={this.state.create_vault_name}

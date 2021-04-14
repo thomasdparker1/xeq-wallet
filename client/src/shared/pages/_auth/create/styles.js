@@ -48,7 +48,7 @@ export const Heading = styled.div`
 
 export const Description = styled.div`
   font-size: 16px;
-  color: #8a8d90;
+  color: #172b4d;
   letter-spacing: 0;
   line-height: 28px;
   margin-top: 12px;

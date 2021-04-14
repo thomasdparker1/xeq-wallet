@@ -8,6 +8,14 @@ export const Title = styled.div`
   line-height: 30px;
 `;
 
+export const SecondaryTitle = styled.div`
+  font-family: Inter-SemiBold;
+  font-size: 20px;
+  color: ${(props) => props.theme.type.optionalSecondary};
+  letter-spacing: 0;
+  line-height: 30px;
+`;
+
 export const Description = styled.div`
   font-family: Inter-Regular;
   font-size: 14px;

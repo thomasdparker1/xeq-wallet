@@ -177,7 +177,7 @@ class TransferContainer extends Component<TransferProps, TransferState> {
 
     return (
       <Fragment>
-        <Form onSubmit={this.handleSubmit}>
+        {/*<Form onSubmit={this.handleSubmit}>*/}
           <Dropdown
             label="Asset"
             placeholder="Select Asset"
@@ -187,47 +187,47 @@ class TransferContainer extends Component<TransferProps, TransferState> {
             options={this.props.options}
             onClick={this.setSendAsset}
           />
-          <Input
-            // @ts-ignore
-            label={
-              availableBalance
-                ? `Amount (Avail. ${availableBalance.toFixed(2)})`
-                : "Amount"
-            }
-            placeholder="Enter amount"
-            type="number"
-            // @ts-ignore
-            error={this.amountIsValid(availableBalance.toFixed(2))}
-            name="send_amount"
-            value={send_amount}
-            onChange={this.handleSendAmountChange}
-          />
-          {windowWidth < 1380 ? (
-            <Description
-              label="Recipient"
-              placeholder="Enter recipient's address"
-              name="recipient_address"
-              value={recipient_address}
-              width={true}
-              rows={windowWidth < 600 ? "3" : "2"}
-              onChange={this.handleChange}
-              error={this.recipientIsValid()}
-            />
-          ) : (
-            <Fragment>
-              <Input
-                label="Recipient"
-                placeholder="Enter recipient address"
-                width={true}
-                type={"text"}
-                name="recipient_address"
-                value={recipient_address}
-                onChange={this.handleChange}
-                error={this.recipientIsValid()}
-              />
-            </Fragment>
-          )}
-        </Form>
+          {/*<Input*/}
+          {/*  // @ts-ignore*/}
+          {/*  label={*/}
+          {/*    availableBalance*/}
+          {/*      ? `Amount (Avail. ${availableBalance.toFixed(2)})`*/}
+          {/*      : "Amount"*/}
+          {/*  }*/}
+          {/*  placeholder="Enter amount"*/}
+          {/*  type="number"*/}
+          {/*  // @ts-ignore*/}
+          {/*  error={this.amountIsValid(availableBalance.toFixed(2))}*/}
+          {/*  name="send_amount"*/}
+          {/*  value={send_amount}*/}
+          {/*  onChange={this.handleSendAmountChange}*/}
+          {/*/>*/}
+          {/*{windowWidth < 1380 ? (*/}
+          {/*  <Description*/}
+          {/*    label="Recipient"*/}
+          {/*    placeholder="Enter recipient's address"*/}
+          {/*    name="recipient_address"*/}
+          {/*    value={recipient_address}*/}
+          {/*    width={true}*/}
+          {/*    rows={windowWidth < 600 ? "3" : "2"}*/}
+          {/*    onChange={this.handleChange}*/}
+          {/*    error={this.recipientIsValid()}*/}
+          {/*  />*/}
+          {/*) : (*/}
+          {/*  <Fragment>*/}
+          {/*    <Input*/}
+          {/*      label="Recipient"*/}
+          {/*      placeholder="Enter recipient address"*/}
+          {/*      width={true}*/}
+          {/*      type={"text"}*/}
+          {/*      name="recipient_address"*/}
+          {/*      value={recipient_address}*/}
+          {/*      onChange={this.handleChange}*/}
+          {/*      error={this.recipientIsValid()}*/}
+          {/*    />*/}
+          {/*  </Fragment>*/}
+          {/*)}*/}
+        {/*</Form>*/}
         <Container>
           <TransferSummary
             recipientAddress={

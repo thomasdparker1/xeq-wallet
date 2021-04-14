@@ -1,41 +1,40 @@
 export const AssetList = [
   {
-    token: "United States Dollar",
-    ticker: "USD",
-    price: "$1.00",
+    token: "Ethereum XEQ",
+    ticker: "wXEQ",
+    price: "$0.00",
+    change: "~ 0.00",
+    symbol: "$",
+  },
+  {
+    token: "Binance Smart Chain XEQ",
+    ticker: "bXEQ",
+    price: "$0.00",
+    change: "~ 0.00",
+    symbol: "$",
+  },
+  {
+    token: "Polkadot XEQ",
+    ticker: "pXEQ",
+    price: "$0.00",
     change: "~ 0.00",
     symbol: "$",
   },
 
   {
-    token: "Euro",
-    ticker: "EUR",
-    price: "$1.00",
-    change: "~ 0.00",
-    symbol: "€",
-  },
-  {
-    token: "Chinese Yuan",
-    ticker: "CNY",
-    price: "$1.00",
-    change: "~ 0.00",
-    symbol: "¥",
-  },
-
-  {
-    token: "Gold",
-    ticker: "GOLD",
-    price: "$1.00",
+    token: "Cardano XEQ",
+    ticker: "cXEQ",
+    price: "$0.00",
     change: "~ 0.00",
     symbol: "$",
   },
-  {
-    token: "Silver",
-    ticker: "SILV",
-    price: "$1.00",
-    change: "~ 0.00",
-    symbol: "$",
-  },
+  // {
+  //   token: "Silver",
+  //   ticker: "SILV",
+  //   price: "$1.00",
+  //   change: "~ 0.00",
+  //   symbol: "$",
+  // },
 ];
 
 // {

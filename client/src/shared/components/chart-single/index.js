@@ -30,9 +30,9 @@ class ChartSingle extends Component {
       <Container>
         <Line
           options={{
-            backgroundColor: "rgba(114, 137, 218, 0.20)",
-            borderColor: "rgba(114, 137, 218, 1)",
-            pointBackgroundColor: "rgba(114, 137, 218, 1)",
+            backgroundColor: "#fff",
+            borderColor: "#fff",
+            pointBackgroundColor: "#fff",
             responsive: true,
             title: {
               display: false,

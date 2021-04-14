@@ -1,8 +1,8 @@
 import { THEME } from "../actions/types.ts";
-import { dark, light, sepia } from "../../assets/styles/themes.js";
+import { dark} from "../../assets/styles/themes.js";
 
 
-const availableThemes = {dark, light, sepia};
+const availableThemes = {dark};
 
 export default function (state = dark, action) {
   switch (action.type) {

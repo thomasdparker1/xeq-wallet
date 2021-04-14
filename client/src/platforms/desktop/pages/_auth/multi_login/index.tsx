@@ -55,7 +55,7 @@ class MultiLoginPage extends Component<MultiLoginProps, MultiloginState> {
     return (
       <Container>
         <Header>
-          <Title>Vault Login</Title>
+          <Title>Wallet Login</Title>
           <Description>
             Privately store, exchange and transfer assets
           </Description>
@@ -64,7 +64,7 @@ class MultiLoginPage extends Component<MultiLoginProps, MultiloginState> {
           <OpenWalletDesktop wallets={this.props.wallets} />
         </Main>
         <Footer>
-          <Label>Need a Vault?</Label>
+          <Label>Need a Wallet?</Label>
           <Route to="/create">Create or Restore</Route>
         </Footer>
       </Container>

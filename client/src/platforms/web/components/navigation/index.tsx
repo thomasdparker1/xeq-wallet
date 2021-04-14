@@ -128,12 +128,12 @@ class Navigation extends Component<NavigationProps, {}> {
         {auth ? (
           <Auth to={"/wallet/assets"}>
             <Icon />
-            <Haven>HAVEN</Haven>
+            <Haven>Equilibria Web App</Haven>
           </Auth>
         ) : (
-          <NoAuth href="https://havenprotocol.org" target="_blank">
+          <NoAuth href="https://equilibria.network" target="_blank">
             <Icon />
-            <Haven>HAVEN</Haven>
+            <Haven>Equilibria Web App</Haven>
           </NoAuth>
         )}
         <Menu>
@@ -187,7 +187,7 @@ class Navigation extends Component<NavigationProps, {}> {
                       <Cell body="Network" label={networkLabel} />
                       {!isSyncing ? (
                         <>
-                          <Cell body="Vault Status" label="Synced" />
+                          <Cell body="Wallet Status" label="Synced" />
                         </>
                       ) : (
                         <Cell
@@ -209,7 +209,7 @@ class Navigation extends Component<NavigationProps, {}> {
                   ) : (
                     <>
                       <Cell
-                        body="Vault Connected"
+                        body="Wallet Connected"
                         label={connected ? "Yes" : "No"}
                       />
                       <Cell body="Block Height" label={blockHeight} />

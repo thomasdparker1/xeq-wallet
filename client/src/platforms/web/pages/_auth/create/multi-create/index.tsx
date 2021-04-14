@@ -51,10 +51,10 @@ export class CreateWebComponent extends Component<any, CreateWebState> {
         <SubContainer>
           <Header>
             <Title>
-              {this.state.selectedCreate ? "Create a Vault" : "Restore a Vault"}
+              {this.state.selectedCreate ? "Create a Wallet" : "Restore a Wallet"}
             </Title>
             <SubDescription>
-              {"Privately store, exchange and transfer assets"}
+              {"Privately store, swap and transfer XEQ"}
             </SubDescription>
           </Header>
           <Tabs>

@@ -31,9 +31,9 @@ export const Field = styled.textarea.attrs((props) => ({
   outline: none;
   transition: 500ms;
   -webkit-appearance: none;
-  background: ${(props) => props.theme.input.input_background};
+  background: ${(props) => props.theme.input.input_foreground};
   border: 1px solid ${(props) => props.theme.input.input_border};
-  color: ${(props) => props.theme.input.input_value};
+  color: ${(props) => props.theme.input.optionalSecondary};
 
   &:focus {
     border: 1px solid ${(props) => props.theme.input.input_border_focus};

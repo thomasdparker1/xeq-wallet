@@ -17,7 +17,7 @@ export const List = styled.ul`
 export const Item = styled.li`
   list-style-type: none;
   font-size: 14px;
-  color: #8a8d90;
+  color: #172b4d;
   margin-top: -8px;
   line-height: 1.5em;
 `;

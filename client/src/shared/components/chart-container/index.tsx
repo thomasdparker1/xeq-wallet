@@ -7,7 +7,7 @@ import Header from "../_layout/header";
 import { Row } from "./styles";
 import { connect } from "react-redux";
 import { PRICE_RANGE_MONTH } from "../../reducers/priceHistory";
-import { getPriceDates, getPriceValues } from "utility/utility";
+import {decreasePricePoints, getPriceDates, getPriceValues} from "utility/utility";
 import { getPriceHistory } from "../../actions";
 import Statistic from "../statistic";
 import { withRouter } from "react-router";
@@ -15,10 +15,15 @@ import { PriceRangeHistory } from "shared/reducers/xPriceHistory";
 import { Ticker } from "shared/reducers/types";
 
 class ChartWrapper extends Component<any, any> {
-  state = { selectedRangeInDays: PRICE_RANGE_MONTH };
+  state = { selectedRangeInDays: PRICE_RANGE_MONTH, price: 0 };
 
   componentDidMount() {
     this.selectPriceHistory(PRICE_RANGE_MONTH);
+    fetch(
+        `https://api.coingecko.com/api/v3/simple/price?ids=triton&vs_currencies=usd`
+    )
+        .then((response) => response.json())
+        .then(res => this.setState({price: res.triton.usd}))
   }
 
   selectPriceHistory(rangeInDays: number | string) {
@@ -29,11 +34,12 @@ class ChartWrapper extends Component<any, any> {
   render() {
     const { id } = this.props.match.params;
     const { amount, price, value } = this.props;
+    console.log(this.props);
 
     let prices;
     let labels;
 
-    if (id === Ticker.XHV) {
+    if (id === Ticker.XEQ) {
       const priceRangeEntry = this.props.priceHistory.prices.find(
         (priceRangeEntry: PriceRangeHistory) =>
           priceRangeEntry.rangeInDays === this.state.selectedRangeInDays
@@ -59,14 +65,14 @@ class ChartWrapper extends Component<any, any> {
         <Chart
           prices={prices}
           labels={labels}
-          price={price.toFixed(2)}
+          price={this.state.price.toFixed(3)}
           onChangePriceRange={(args: number | string) =>
             this.selectPriceHistory(args)
           }
         />
         <Row>
           <Statistic label="Amount" value={amount.toFixed(2)} />
-          <Statistic label="Price" value={`$` + price.toFixed(2)} />
+          <Statistic label="Price" value={`$` + this.state.price.toFixed(3)} />
           <Statistic
             label="Value"
             value={value.toLocaleString("en-US", {
